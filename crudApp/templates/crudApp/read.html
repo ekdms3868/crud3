@@ -1,0 +1,18 @@
+{% extends 'crudApp/index.html' %}
+{% block content %}
+<section class="page-section" id="services">
+    <div class="container px-4 px-lg-5">
+        <h2 class="text-center mt-0">READ</h2>
+        <hr>
+        {% for posts in posts.all %}
+        <p>제목 :<a href="{% url 'detail' posts.id %}">{{ posts.title }}</a></p>
+        <p>작성자 : {{ posts.writer }}</p>
+        <p>작성 일지 및 시간 : {{ posts.pub_date }}</p>
+        {% if posts.image %}
+            <img src="{{ posts.image.url }}" width="250" height="250" alt="Card image cap">
+        {% endif %}
+        <hr>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

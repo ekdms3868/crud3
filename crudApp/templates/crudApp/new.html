@@ -1,0 +1,18 @@
+{% extends 'crudApp/index.html' %}
+{% block content %}
+<section class="page-section bg-primary" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <table>
+                        {{form.as_table}}
+                    <table>
+                    <button class="btn btn-primary btn-xl" typr='submit'>작성</button>    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

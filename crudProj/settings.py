@@ -135,3 +135,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = 'AKIASWV5MAUWMDTQA6NU'
+AWS_SECRET_ACCESS_KEY='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'
+AWS_STORAGE_BUCKET_NAME='likelion-pore'

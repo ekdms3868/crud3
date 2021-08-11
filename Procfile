@@ -1,0 +1,1 @@
+web: gunicorn pore.wsgi --log-file -
